@@ -39,10 +39,10 @@ const questions = [
         message: 'What did you learn from creating it: ',
     },
     {
-        type: 'confirm', 
-        name: 'tocConfirm',
-        message: 'Do you want to include a Table of Contents: ',
-        default: false
+        type: 'checkbox', 
+        name: 'builtWith',
+        message: 'What did you use to build this project: ',
+        choices: ['JavaScript', 'HTML', 'CSS', 'Node.js', 'jQuery', 'Markdown']
     },
     {
         type: 'input',
