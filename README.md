@@ -1,3 +1,10 @@
-# Professional README Generator Starter Code
+# Readme Generator
 
-[How to create a Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
+## License
+
+Distributed under the "What the Fuck you Want" License.
+[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)
+
+[Click Here for More Information](http://www.wtfpl.net/about/)
+
+---
