@@ -12,7 +12,7 @@
 9. [Tests](#tests)
 10. [Contact](#contact)
 
-  ## Description
+## Description
 ------
 There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
 
@@ -28,13 +28,7 @@ There are many variations of passages of Lorem Ipsum available, but the majority
 ------
 * [![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com)
 
-* [![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Glossary/HTML5)
-
-* [![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-
 * [![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/en/about/)
-
-* [![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)](https://jquery.com/)
 
 * [![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)
 
@@ -61,12 +55,12 @@ Theo Greer
 
 ## License
 ---
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)
 
 
-Distributed under the "MIT" License.
+Distributed under the "What the Fuck you Want" License.
 
-[Click Here for More Information](https://opensource.org/licenses/MIT)
+[Click Here for More Information](http://www.wtfpl.net/about/)
 
 
 
@@ -86,6 +80,6 @@ There are many variations of passages of Lorem Ipsum available, but the majority
 
 ## Contact
 ------
-Theo Greer - tdgreer1203@gmail.com
+Theodore Greer - tdgreer1203@gmail.com
 
 Project Link: [https://www.github.com/tdgreer1203/readme-generator](https://www.github.com/tdgreer1203/readme-generator)

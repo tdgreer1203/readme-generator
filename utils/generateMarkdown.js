@@ -127,7 +127,7 @@ function generateMarkdown(data) {
 
 ${renderToc(data.contributeConfirm, data.testsConfirm)}
 
-  ## Description
+## Description
 ------
 ${data.motivation}
 
