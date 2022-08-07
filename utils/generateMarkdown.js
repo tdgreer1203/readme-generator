@@ -73,10 +73,59 @@ ${contribute}`;
   }
 }
 
+renderToc = (contribute, tests) => {
+  if(contribute && tests) {
+return `## Table of Contents
+1. [Description](#description)
+2. [Built With](#built-with)
+3. [Installation](#installation)
+4. [Useage](#useage)
+5. [Credits](#credits)
+6. [License](#license)
+7. [Features](#features)
+8. [Contirbute](#contribute)
+9. [Tests](#tests)
+10. [Contact](#contact)`;
+  } else if(contirbute && !tests) {
+return `## Table of Contents
+1. [Description](#description)
+2. [Built With](#built-with)
+3. [Installation](#installation)
+4. [Useage](#useage)
+5. [Credits](#credits)
+6. [License](#license)
+7. [Features](#features)
+8. [Contirbute](#contribute)
+9. [Contact](#contact)`;
+  } else if(!contirbute && tests) {
+return `## Table of Contents
+1. [Description](#description)
+2. [Built With](#built-with)
+3. [Installation](#installation)
+4. [Useage](#useage)
+5. [Credits](#credits)
+6. [License](#license)
+7. [Features](#features)
+8. [Tests](#tests)
+9. [Contact](#contact)`;
+  } else {
+return `## Table of Contents
+1. [Description](#description)
+2. [Built With](#built-with)
+3. [Installation](#installation)
+4. [Useage](#useage)
+5. [Credits](#credits)
+6. [License](#license)
+7. [Features](#features)
+8. [Contact](#contact)`;  
+  }
+}
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
 
+${renderToc(data.contributeConfirm, data.testsConfirm)}
 
   ## Description
 ------
