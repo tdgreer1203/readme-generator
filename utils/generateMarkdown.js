@@ -25,14 +25,14 @@ return licenseLink;
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  return `## License
+return `## License
+---
+${renderLicenseBadge(license)}
 
-    Distributed under the "${license}" License.
-    ${renderLicenseBadge(license)}
 
-    [Click Here for More Information](${renderLicenseLink(license)})
+Distributed under the "${license}" License.
 
-    ---`;
+[Click Here for More Information](${renderLicenseLink(license)})`;
 }
 
 renderBuiltWithSection = (languages) => {
@@ -42,10 +42,10 @@ renderBuiltWithSection = (languages) => {
   let badgeStringArr = [];
   for(let i = 0; i < languages.length; i++) {
     let badgeString = languages[i] === 'JavaScript' ? '[![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com)'
-                    : languages[i] === 'HTML' ? '![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)(https://developer.mozilla.org/en-US/docs/Glossary/HTML5)'
-                    : languages[i] === 'CSS' ? '![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)(https://developer.mozilla.org/en-US/docs/Web/CSS)'
-                    : languages[i] === 'Node.js' ? '![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)(https://nodejs.org/en/about/)'
-                    : languages[i] === 'jQuery' ? '![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)(https://jquery.com/)'
+                    : languages[i] === 'HTML' ? '[![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Glossary/HTML5)'
+                    : languages[i] === 'CSS' ? '[![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)'
+                    : languages[i] === 'Node.js' ? '[![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/en/about/)'
+                    : languages[i] === 'jQuery' ? '[![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)](https://jquery.com/)'
                     : languages[i] === 'Markdown' ? '[![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)'
                     : '';
     badgeStringArr.push(badgeString);
@@ -58,16 +58,18 @@ renderTests = (addTests, tests) => {
     return '';
   } else {
     return `## Tests
-    ${tests}`;
+---
+${tests}`;
   }
 }
 
-renderContribute = (addContribute, contibute) => {
+renderContribute = (addContribute, contribute) => {
   if(!addContribute) {
     return ''; 
   } else {
     return `## Contribute
-    ${contribute}`;
+---
+${contribute}`;
   }
 }
 
@@ -75,47 +77,63 @@ renderContribute = (addContribute, contibute) => {
 function generateMarkdown(data) {
   return `# ${data.title}
 
-    ## Description
-    
-    ${data.motivation}
 
-    ${data.reason}
+  ## Description
+------
+${data.motivation}
 
-    ${data.problem}
+${data.reason}
 
-    ${data.learned}
+${data.problem}
 
-    ## Built With
-    
-    ${renderBuiltWithSection(data.builtWith).map((item) => `-${item}
-    `).join('')}
-    ## Installation
+${data.learned}
 
-    ${data.installation}
 
-    ## Useage
 
-    ${data.useage}
+## Built With
+------
+${renderBuiltWithSection(data.builtWith).map((item) => `* ${item}
+`).join('\n')}
 
-    ## Credits
 
-    ${data.credits}
 
-    ${renderLicenseSection(data.license)}
+## Installation
+------
+${data.installation}
 
-    ## Features
 
-    ${data.features}
 
-    ${renderContribute(data.contributeConfirm, data.contribute)}
+## Useage
+------
+${data.useage}
 
-    ${renderTests(data.testsConfirm, data.tests)}
 
-    ## Contact
 
-    ${data.name} - ${data.email}
+## Credits
+------
+${data.credits}
 
-    Project Link: [${data.link}](${data.link})`;
+
+
+${renderLicenseSection(data.license)}
+
+
+
+## Features
+------
+${data.features}
+
+
+${renderContribute(data.contributeConfirm, data.contribute)}
+
+${renderTests(data.testsConfirm, data.tests)}
+
+
+## Contact
+------
+${data.name} - ${data.email}
+
+Project Link: [${data.link}](${data.link})`;
 }
 
 module.exports = generateMarkdown;
