@@ -54,6 +54,17 @@ renderBuiltWithSection = (languages) => {
   return badgeStringArr;
 }
 
+renderTests = (addTests, tests) => {
+  if(!addTests) {
+    return;
+  } else {
+    return `## Tests
+
+    ${tests}
+    `;
+  }
+}
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `
@@ -74,7 +85,35 @@ function generateMarkdown(data) {
     ${renderBuiltWithSection(data.builtWith).map((item) => `-${item}
     `).join('')}
 
+    ## Installation
+
+    ${data.installation}
+
+    ## Useage
+
+    ${data.useage}
+
+    ## Credits
+
+    ${data.credits}
+
     ${renderLicenseSection(data.license)}
+
+    ## Features
+
+    ${data.features}
+
+    ## Contribute
+
+    ${data.contribute}
+
+    ${renderTests(data.testsConfirm, data.tests)}
+
+    ## Contact
+
+    ${data.name} - ${data.email}
+
+    Project Link: ${data.link}
   `;
 }
 

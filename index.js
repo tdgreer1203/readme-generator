@@ -7,6 +7,32 @@ const generateMarkdown = require('./utils/generateMarkdown');
 const questions = [
     {
         type: 'input',
+        name: 'name',
+        message: 'Please enter your name (required): ',
+        validate: nameInput => {
+            if(nameInput) {
+                return true;
+            } else {
+                console.log('Please enter your name.');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Please enter your email (required): ',
+        validate: emailInput => {
+            if(emailInput) {
+                return true;
+            } else {
+                console.log('Please enter your email.');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
         name: 'title',
         message: 'Project Title (required): ',
         validate: titleInput => {
@@ -14,6 +40,19 @@ const questions = [
                 return true;
             } else {
                 console.log('Please enter a project title.');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'link',
+        message: 'Please enter a link to the project (required): ',
+        validate: linkInput => {
+            if(linkInput) {
+                return true;
+            } else {
+                console.log('Please enter a link to the project.');
                 return false;
             }
         }
@@ -123,23 +162,3 @@ function init() {
 
 // Function call to initialize app
 init();
-
-
-/*
-README Outline
-    Title
-    Description
-        What was your motivation?
-        Why did you build this project?
-        What problem does it solve?
-        What did you learn?
-        What makes your project stand out?
-    Table of Contents
-        Installation
-        Usage
-        Credits
-        License
-    Features
-    How to Contribute
-    Tests
-*/
