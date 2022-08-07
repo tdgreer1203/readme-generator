@@ -55,7 +55,7 @@ renderBuiltWithSection = (languages) => {
 
 renderTests = (addTests, tests) => {
   if(!addTests) {
-    return;
+    return '';
   } else {
     return `## Tests
     ${tests}`;
@@ -64,7 +64,7 @@ renderTests = (addTests, tests) => {
 
 renderContribute = (addContribute, contibute) => {
   if(!addContribute) {
-    return; 
+    return ''; 
   } else {
     return `## Contribute
     ${contribute}`;
@@ -86,6 +86,7 @@ function generateMarkdown(data) {
     ${data.learned}
 
     ## Built With
+    
     ${renderBuiltWithSection(data.builtWith).map((item) => `-${item}
     `).join('')}
     ## Installation
@@ -101,11 +102,13 @@ function generateMarkdown(data) {
     ${data.credits}
 
     ${renderLicenseSection(data.license)}
+
     ## Features
 
     ${data.features}
 
     ${renderContribute(data.contributeConfirm, data.contribute)}
+
     ${renderTests(data.testsConfirm, data.tests)}
 
     ## Contact
