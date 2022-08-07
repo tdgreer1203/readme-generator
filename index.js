@@ -110,9 +110,18 @@ const questions = [
         message: 'List the project features here: '
     },
     {
+        type: 'confirm',
+        name: 'contributeConfirm',
+        message: 'Can people contribute to this project: ',
+        default: false
+    },
+    {
         type: 'input',
         name: 'contribute',
-        message: 'How can others contribute: '
+        message: 'How can others contribute: ',
+        when: ({contributeConfirm}) => {
+            return(contributeConfirm ? true : false)
+        }
     },
     {
         type: 'confirm',

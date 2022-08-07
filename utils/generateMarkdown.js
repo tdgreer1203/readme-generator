@@ -32,8 +32,7 @@ function renderLicenseSection(license) {
 
     [Click Here for More Information](${renderLicenseLink(license)})
 
-    ---
-  `;
+    ---`;
 }
 
 renderBuiltWithSection = (languages) => {
@@ -59,16 +58,22 @@ renderTests = (addTests, tests) => {
     return;
   } else {
     return `## Tests
+    ${tests}`;
+  }
+}
 
-    ${tests}
-    `;
+renderContribute = (addContribute, contibute) => {
+  if(!addContribute) {
+    return; 
+  } else {
+    return `## Contribute
+    ${contribute}`;
   }
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `
-    # ${data.title}
+  return `# ${data.title}
 
     ## Description
     
@@ -81,10 +86,8 @@ function generateMarkdown(data) {
     ${data.learned}
 
     ## Built With
-
     ${renderBuiltWithSection(data.builtWith).map((item) => `-${item}
     `).join('')}
-
     ## Installation
 
     ${data.installation}
@@ -98,23 +101,18 @@ function generateMarkdown(data) {
     ${data.credits}
 
     ${renderLicenseSection(data.license)}
-
     ## Features
 
     ${data.features}
 
-    ## Contribute
-
-    ${data.contribute}
-
+    ${renderContribute(data.contributeConfirm, data.contribute)}
     ${renderTests(data.testsConfirm, data.tests)}
 
     ## Contact
 
     ${data.name} - ${data.email}
 
-    Project Link: ${data.link}
-  `;
+    Project Link: [${data.link}](${data.link})`;
 }
 
 module.exports = generateMarkdown;
