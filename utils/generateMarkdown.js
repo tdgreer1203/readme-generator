@@ -86,7 +86,7 @@ return `## Table of Contents
 8. [Contirbute](#contribute)
 9. [Tests](#tests)
 10. [Contact](#contact)`;
-  } else if(contirbute && !tests) {
+  } else if(contribute && !tests) {
 return `## Table of Contents
 1. [Description](#description)
 2. [Built With](#built-with)
@@ -97,7 +97,7 @@ return `## Table of Contents
 7. [Features](#features)
 8. [Contirbute](#contribute)
 9. [Contact](#contact)`;
-  } else if(!contirbute && tests) {
+  } else if(!contribute && tests) {
 return `## Table of Contents
 1. [Description](#description)
 2. [Built With](#built-with)
